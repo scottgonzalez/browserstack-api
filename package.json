@@ -6,12 +6,18 @@
     "start": "node index.js"
   },
   "main": "index.js",
-  "author": {
+  "repository" : { 
+    "type" : "git", 
+    "url" : "https://github.com/pradeep-mishra/browserstack-api"
+  },
+  "bugs" : {
+    "url" : "https://github.com/pradeep-mishra/browserstack-api/issues"
+  },
+  "author" : {
     "name": "Pradeep Mishra",
     "email": "pradeep23oct@gmail.com",
     "github": "https://github.com/pradeep-mishra",
     "twitter": "https://twitter.com/ipradeepmishra",
-    "npmjs" : "https://www.npmjs.org/~pradeepmishra"
   },
   "dependencies": {
     "request": "^2.47.0",
