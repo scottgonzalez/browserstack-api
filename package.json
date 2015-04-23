@@ -1,10 +1,11 @@
 {
   "name": "browserstack-api",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "BrowserStack REST API wrapper",
   "scripts": {
     "start": "node index.js"
   },
+  "license" : "MIT",
   "main": "index.js",
   "repository" : { 
     "type" : "git", 
@@ -16,11 +17,21 @@
   "author" : {
     "name": "Pradeep Mishra",
     "email": "pradeep23oct@gmail.com",
-    "github": "https://github.com/pradeep-mishra",
-    "twitter": "https://twitter.com/ipradeepmishra",
+    "github": "https://github.com/pradeep-mishra"
   },
   "dependencies": {
     "request": "^2.47.0",
     "q": "^1.0.1"
-  }
+  },
+  "keywords": [
+        "browserstack",
+        "worker",
+        "browserstack-api",
+        "browserstack-rest",
+        "node-browserstack",
+        "promises",
+        "BrowseStack",
+        "browserstack-wrapper",
+        "browserstack-promise"   
+    ]
 }

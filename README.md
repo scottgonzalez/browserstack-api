@@ -10,7 +10,7 @@ A JavaScript REST wrapper for BrowserStack service for node.js (0.6.x and up).  
 Features
 --------
 
-* Currently Work in servers (NodeJS)
+* Currently Work on servers (NodeJS)
 * Simple service wrapper that allows you to easily put together All BrowserStack REST API libraries
 * Easy create Workers, Sessions
 * Automatic User credential injection on all REST calls
@@ -23,34 +23,35 @@ Example usage
 
 ```javascript
 var BS = require('browserstack-api');
-// intialize BrowserStack with user keys
-var BrowserStack = new BS('user', 'key');
-// alternate method to intialize
-/*
+
+// instantiate browserstack-api with userName and key
+var BrowserStack = new BS('userName', 'myKey');
+
+// an alternate method to set username and key after creating an instance of browserstack-api
+
 var BrowserStack = new BS;
 BrowserStack.setUser('userName');
 BrowserStack.setKey('myKey');
-*/
 
 
-// get all supported browsers 
+// get all supported browsers list
 //{all : true, flat : true} optional parameters
 BrowserStack.getBrowsers({all : true, flat : true}).then(function(reponseModel){
-
+    console.log(responseModel.toJSON());
 }).fail(function(error){
 
 });
 
-// for getting status of account
+// get status of an account
 BrowserStack.getStatus().then(function(reponseModel){
-
+    console.log(responseModel.toJSON());
 }).fail(function(error){
 
 });
 
 // get all workers created in account
 BrowserStack.getAllWorkers().then(function(reponseModel){
-
+    console.log(responseModel.toJSON());
 }).fail(function(error){
 
 });
@@ -69,31 +70,35 @@ getAllWorkers();
 // Worker Instance
 // Worker class extend DataModel or responseModel
 var worker = new BrowserStack.Worker;
-
-// for creating new worker
+worker.setOS('windows')
+.setOSVersion(7)
+.setBrowser('chrome')
+.setBrowserVersion('20.0')
+.setURL('http://google.com'); 
+// create new worker on browserStack
 worker.create().then(function(responseModel){
-
+	console.log(responseModel.toJSON());
 }).fail(function(err){
 
 });
 
 // get status of worker
 worker.getStatus().then(function(responseModel){
-
+    console.log(responseModel.toJSON());
 }).fail(function(err){
 
 });
 
-// for taking screenshot worker
+// for taking screenshot of worker
 worker.takeScreenShot().then(function(responseModel){
-
+    console.log(responseModel.toJSON());
 }).fail(function(err){
 
 });
 
 // for destroying worker
 worker.destroy().then(function(responseModel){
-
+    console.log(responseModel.toJSON());
 }).fail(function(err){
 
 });
