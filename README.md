@@ -1,3 +1,7 @@
+[![NPM](https://nodei.co/npm/browserstack-api.svg?downloads=true&downloadRank=true)](https://nodei.co/npm/browserstack-api/)&nbsp;&nbsp;
+[![Build Status](https://travis-ci.org/pradeep-mishra/browserstack-api.svg?branch=master)](https://travis-ci.org/pradeep-mishra/browserstack-api)
+
+
 BrowserStack REST API Wrapper 
 =======
 
